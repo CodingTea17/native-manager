@@ -5,6 +5,7 @@ import { createStore } from 'redux';
 import { APIKEY, AUTHDOMAIN, DATABASEURL, PROJECTID, STORAGEBUCKET, MESSAGINGSENDERID } from 'react-native-dotenv'
 import firebase from 'firebase';
 import reducers from './reducers';
+import LoginForm from './components/LoginForm';
 
 class App extends Component {
   componentWillMount() {
@@ -22,11 +23,14 @@ class App extends Component {
 
   render() {
     return (
+      <Provider store={createStore(reducers)}>
         <View>
           <Text>
             Hello, Manager!
           </Text>
+          <LoginForm />
         </View>
+      </Provider>
     );
   }
 }

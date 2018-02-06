@@ -6,6 +6,7 @@ import { APIKEY, AUTHDOMAIN, DATABASEURL, PROJECTID, STORAGEBUCKET, MESSAGINGSEN
 import firebase from 'firebase';
 import reducers from './reducers';
 import LoginForm from './components/LoginForm';
+import { Header } from './components/common';
 
 class App extends Component {
   componentWillMount() {
@@ -25,9 +26,7 @@ class App extends Component {
     return (
       <Provider store={createStore(reducers)}>
         <View>
-          <Text>
-            Hello, Manager!
-          </Text>
+          <Header heading="Hello, Manager!" />
           <LoginForm />
         </View>
       </Provider>

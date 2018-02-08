@@ -29,9 +29,7 @@ class App extends Component {
 
     return (
       <Provider store={store}>
-        <View>
-          <Router />
-        </View>
+        <Router />
       </Provider>
     );
   }

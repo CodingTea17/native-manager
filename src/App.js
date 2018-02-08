@@ -8,6 +8,7 @@ import firebase from 'firebase';
 import reducers from './reducers';
 import LoginForm from './components/LoginForm';
 import { Header } from './components/common';
+import Router from './Router';
 
 class App extends Component {
   componentWillMount() {
@@ -29,8 +30,7 @@ class App extends Component {
     return (
       <Provider store={store}>
         <View>
-          <Header heading="Hello, Manager!" />
-          <LoginForm />
+          <Router />
         </View>
       </Provider>
     );

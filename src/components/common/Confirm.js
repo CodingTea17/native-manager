@@ -4,10 +4,10 @@ import { CardSection } from './CardSection';
 import { Button } from './Button';
 
 
-const Confirm = ({ children, visable, onAccept, onDecline }) => {
+const Confirm = ({ children, visible, onAccept, onDecline }) => {
   return (
       <Modal
-        visable={visable}
+        visible={visible}
         transparent
         animationType="slide"
         onRequestClose={() => {}}

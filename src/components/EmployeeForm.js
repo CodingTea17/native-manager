@@ -7,7 +7,7 @@ import { CardSection, Input } from './common';
 class EmployeeForm extends Component {
   render() {
     return (
-      <View>
+      <View style={{marginBottom: 120}}>
         <CardSection>
           <Input
             label="Name"
